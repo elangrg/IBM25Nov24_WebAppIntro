@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--<h1>Hello World!!!!</h1>-->
+
+ 
+
+    <script>
+
+       // strings
+        var name = "Ganesh";
+
+
+        var selection = "a\"";
+        // numbers
+        var count = 25;
+        var cost = 1.51;
+        // boolean
+        var found = true;
+        // null
+        var object = null;
+        // undefined
+        var flag = undefined;
+        var ref; // assigned undefined automatically
+        //_______________
+
+       // alert(abc);
+
+        //Value type copies value
+
+
+        var color1 = "red";
+        var color2 = color1;
+        console.log(color1); // "red"
+        console.log(color2); // "red"
+        color1 = "blue";
+        console.log(color1); // "blue"
+        console.log(color2); // "red"
+        //____________
+
+
+        console.log(typeof "Ganesh"); // "string"
+        console.log(typeof 10); // "number"
+        console.log(typeof 5.1); // "number"
+        console.log(typeof true); // "boolean"
+        console.log(typeof undefined); // "undefined"
+        console.log(typeof null); // Object
+
+        //-------
+        console.log("5" == 5); // true - Auto Convert
+        console.log("5" === 5); // false - no Coercion (with out auto conver)
+        console.log(undefined == null); // true
+        console.log(undefined === null); // false
+
+
+       // Undefined means a variable has been declared but has no value:
+        var var1;
+        alert(var1); //undefined
+        alert(typeof var1); //undefined
+
+       // Null is an assignment:
+        var var2= null;
+        alert(var2); //null
+        alert(typeof var2); //object
+
+
+
+
+
+
+//        //----------------REFERENCE TYPE
+
+        var object1 = new Object();
+        // do something
+        var object2 = object1;
+
+        object1 = null; // dereference
+
+
+
+        var obj = new Object();
+        obj.myCustomProperty = "Awesome!";
+        console.log(obj.myCustomProperty); //
+
+        //        //Instantiating Built-in  Ref type
+        var items = new Array();
+        var now = new Date();
+        var error = new Error("Something bad happened.");
+        var func = new Function("console.log('Hi');");
+        var object = new Object();
+        var re = new RegExp("\\d+");
+
+        alert(error.message + error.stack );
+
+
+//        // - Object Example
+        var book = {
+            name: "HTML 5 Reference",
+            year: 2012
+        };
+         // or
+        var book = {
+            "name": "HTML 5 Reference",
+            "year": 2012
+        };
+        // or
+        var book = new Object();
+        book.name = "HTML 5 Reference";
+        book.year = 2012;
+
+        alert(book["year"] + ' ' + book.name );
+
+//        //- Array Eg
+        var colors = ["red", "blue", "green"];
+        console.log(colors[0]); // "red"
+       // or
+        var colors = new Array("red", "blue", "green")
+        console.log(colors[0]); // "red"
+        //-----------
+        reflect("demo")
+        // Function Object Example
+        function reflect(value) {
+            return value;
+        }
+        // is the same as
+        var reflect = new Function("value", "return value;");
+
+        alert(reflect(1000));
+
+//        //--- instanceof Example
+
+        var items = [];
+        var object = {};
+        function reflect(value) {
+
+
+
+
+            return value;
+        }
+        console.log(items instanceof Array); // true
+        console.log(items instanceof Object); // true
+        console.log(object instanceof Object); // true
+        console.log(object instanceof Array); // false
+        console.log(reflect instanceof Function); // true
+        console.log(reflect instanceof Object); // true
+
+        sayHi()
+
+
+//        //- Delegate or Function pointer
+        function sayHi() {
+            console.log("Hi!");
+        }
+        sayHi(1,2,3,4); // outputs "Hi!"
+         var sayHi2 = sayHi;
+        sayHi2(); // outputs "Hi!"
+
+
+        //fptr();
+
+     var fptr=   function () {
+         alert("anonymous function");
+        }
+
+     fptr();
+
+
+    </script>
+
+
+
+</body>
+</html>
